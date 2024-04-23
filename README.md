@@ -43,7 +43,7 @@ List of devices having existing code support but untested in majority of cases:
 - Osprey E333C
 - Osprey E335C
 - Squirrel BCU1525
-- Squirrel Foreest Kitten FK33
+- Squirrel Forest Kitten FK33
 - Squirrel Jungle Cat JC13
 - Squirrel Jungle Cat JC35
 - TUL BTU9P
