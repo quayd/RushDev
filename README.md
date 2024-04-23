@@ -72,6 +72,9 @@ The terminal allows you to do operations that in certain states may be dangerous
   
 Lots more work to go but it might be useful for some of you as a start. 
 
+### Card Specific Notes
+FK33/TH53 doesn't detect DNA until a valid bitstream is detected, so any -d <device> options will require the serial number instead to get the expected results.
+
 # Welcome Feedback
 It will be helpful to receive logs from devices not listed above running the various RushDev scripts with the option `--log-level=trace`.
 Some features are not yet working fully. No need to report text user interfaces issues at the moment, as most are known.
