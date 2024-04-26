@@ -31,17 +31,17 @@ Currently, thorough testing has only occurred  with the Osprey ECU50. Some testi
 
 RushDev most likely works with other FPGA's but requires further testing and documenting, which should come shortly.
 
-List of devices confirmed working with bitstream and FPGAMiner mining with the loaded bitstream:
+List of devices confirmed working with loading bitstreams and FPGAMiner mining with the loaded bitstream:
 - Osprey ECU50
 - TUL TH53
 - Squirrel BCU1525
 - AMD Varium C1100
+- Bitware CVP13
 
 List of devices having existing code support but untested in majority of cases:
 - AMD Alveo U50C
 - AMD Alveo U200
 - AMD VCU1525
-- Bitware CVP13
 - Osprey ECU200
 - Osprey E313
 - Osprey E333C
