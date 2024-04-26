@@ -27,28 +27,30 @@ Supported operations currently:
 ## Compatibility
 Windows version and a version compatible with older Linux GLibC's coming shortly.
 
-Currently, thorough testing has only occurred  with the Osprey ECU50. Some testing has taken place for C1100, BCU 1525, FK33 and CVP-13. The CVP-13 only partially works due to different UARTS for JTAG and FPGA Communications (to be fixed shortly). 
+Currently, thorough testing has only occurred  with the Osprey ECU50. Some testing has taken place for C1100, BCU 1525, FK33, TH53 and CVP-13. The CVP-13 only partially works due to different UARTS for JTAG and FPGA Communications (to be fixed shortly). 
 
 RushDev most likely works with other FPGA's but requires further testing and documenting, which should come shortly.
+
+List of devices confirmed working with bitstream and FPGAMiner mining with the loaded bitstream:
+- Osprey ECU50
+- TUL TH53
+- Squirrel BCU1525
+- AMD Varium C1100
 
 List of devices having existing code support but untested in majority of cases:
 - AMD Alveo U50C
 - AMD Alveo U200
-- AMD Varium C1100
 - AMD VCU1525
 - Bitware CVP13
-- Osprey ECU50
 - Osprey ECU200
 - Osprey E313
 - Osprey E333C
 - Osprey E335C
-- Squirrel BCU1525
 - Squirrel Forest Kitten FK33
 - Squirrel Jungle Cat JC13
 - Squirrel Jungle Cat JC35
 - TUL BTU9P
 - TUL BTU9P-Pro
-- TUL TH53
 - TUL TH53M
 - TUL TH55
 
