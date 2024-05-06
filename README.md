@@ -68,15 +68,18 @@ Scripts in the zip file demonstrate common operations and there is terminal util
 The terminal allows you to do operations that in certain states may be dangerous for your device. Please, be very aware of what you are doing. Using 'M" a lot to quickly get a monitored assessment of your clock speed and temperature can aid in understanding the state of your device.
 
 ### The main operations in the terminal are:
-- pressing 'e' will take you to the Custom Command edit box where you can enter any command that you could have supplied in the scripts with --ftdi-cmd. Type 'help' to see a list of command and ex. 'help load' to see the help for a specific command.
+- pressing 'e' will take you to the Custom Command edit box where you can enter any command that you could have supplied in the scripts with `--ftdi-cmd`. Type `help` to see a list of command and ex. `help load` to see the help for a specific command.
 - pressing 'm' will open an edit box that lets you monitor FPGA communication and is just a short-cut allowing you to skip typing `monitor -t`. You can directly just type how many ms you want to monitor for and any other options you wish, that can be found in the above Custom Command help section or taken from script examples.
-- pressing 'l' will open an edit box that lets you load bitstreams. Again it is a short-cut for 'load -f' so you can directly type a filename and any other options you wish, that can be found in the above Custom Command help section or taken from the script examples. ex 'top.bit -f K1.bit -f K2.bit'
+- pressing 'l' will open an edit box that lets you load bitstreams. Again it is a short-cut for `load -f` so you can directly type a filename and any other options you wish, that can be found in the above Custom Command help section or taken from the script examples. ex `top.bit -f K1.bit -f K2.bit`
   
 Lots more work to go but it might be useful for some of you as a start. 
 
 ### FK33/TH53 Specific Notes
-FK33/TH53 doesn't detect DNA until a valid bitstream is detected, so any -d <device> options will require the serial number instead to get the expected results.
+FK33/TH53 doesn't detect DNA until a valid bitstream is detected, so any `-d <device>` options will require the serial number instead to get the expected results.
+### CVP-13 Specific Notes
+For the CVP there are two FTDI devices. If you run RushDev once with no command line options or the `term.sh` script it will show you whether your CVP is detected, which FTDI device JTAG was found on, and it will show another FTDI device on another serial number. Take note of this other device serial number. This second FTDI device is the one the bitstream communicates to, not the JTAG one. The JTAG FTDI is used for detecting the device if no bitstream is loaded, getting the basic temperature and DNA, and loading the bitstream. The other FTDI device is used for ramping up/down and actual mining. 
 
+With the second FTDI serial number, now change the script `load-full.sh` to use the specified serial number with the `-d <your_cvp_serial>` option instead of `-a`
 # Welcome Feedback
 It will be helpful to receive logs from devices not listed above running the various RushDev scripts with the option `--log-level=trace`.
 Some features are not yet working fully. No need to report text user interfaces issues at the moment, as most are known.
