@@ -80,6 +80,7 @@ FK33/TH53 doesn't detect DNA until a valid bitstream is detected, so any `-d <de
 For the CVP there are two FTDI devices. If you run RushDev once with no command line options or the `term.sh` script it will show you whether your CVP is detected, which FTDI device JTAG was found on, and it will show another FTDI device on another serial number. Take note of this other device serial number. This second FTDI device is the one the bitstream communicates to, not the JTAG one. The JTAG FTDI is used for detecting the device if no bitstream is loaded, getting the basic temperature and DNA, and loading the bitstream. The other FTDI device is used for ramping up/down and actual mining. 
 
 With the second FTDI serial number, now change the script `load-full.sh` to use the specified serial number with the `-d <your_cvp_serial>` option instead of `-a`
+example: `sudo ./rushdev --log-level=warn --no-ui --ftdi-cmd="monitor -t 5500 -p 350 --unit-count=1 -v user" --ftdi-cmd="verify --max-clock=35 --action=quit" --ftdi-cmd="load -f GRAM20_ECU50_Top_A2.bit -f Z1.bit -f Z2.bit -f Z3.bit -f Z4.bit -d <your_cvp_second_serial_number" --ftdi-cmd="monitor -t 5500 -p 350 --unit-count=1 -v user"`
 # Welcome Feedback
 It will be helpful to receive logs from devices not listed above running the various RushDev scripts with the option `--log-level=trace`.
 Some features are not yet working fully. No need to report text user interfaces issues at the moment, as most are known.
