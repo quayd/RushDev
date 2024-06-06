@@ -25,7 +25,8 @@ Supported operations currently:
  
 
 ## Compatibility
-Windows version and a version compatible with older Linux GLibC's coming shortly.
+Ubuntu 16.04+
+Windows version coming shortly.
 
 Currently, thorough testing has only occurred  with the Osprey ECU50. Some testing has taken place for C1100, BCU 1525, FK33, TH53 and CVP-13. The CVP-13 only partially works due to different UARTS for JTAG and FPGA Communications (to be fixed shortly). 
 
