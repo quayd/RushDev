@@ -81,6 +81,10 @@ For the CVP there are two FTDI devices. If you run RushDev once with no command 
 
 With the second FTDI serial number, now change the script `load-full.sh` to use the specified serial number with the `-d <your_cvp_serial>` option instead of `-a`
 example: `sudo ./rushdev --log-level=warn --no-ui --ftdi-cmd="monitor -t 5500 -p 350 --unit-count=1 -v user" --ftdi-cmd="verify --max-clock=35 --action=quit" --ftdi-cmd="load -f GRAM20_ECU50_Top_A2.bit -f Z1.bit -f Z2.bit -f Z3.bit -f Z4.bit -d <your_cvp_second_serial_number" --ftdi-cmd="monitor -t 5500 -p 350 --unit-count=1 -v user"`
+
+### Voltage Control
+There is a script `set-volt6.sh` which will run rushdev to set the voltage on all devices or you can modify the script and change `-a` to `-d <dna/serial number>` one or more times to set the voltage for specific devices. Voltage control requires the utility `changeVoltage` and the `bits` folder from other miner releases to be put in a sub-folder `util`. Inquire on Discord channel for assistance.
+
 # Welcome Feedback
 It will be helpful to receive logs from devices not listed above running the various RushDev scripts with the option `--log-level=trace`.
 Some features are not yet working fully. No need to report text user interfaces issues at the moment, as most are known.
