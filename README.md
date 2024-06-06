@@ -1,5 +1,5 @@
-# RushDev v0.8.0
-https://github.com/quayd/RushDev/releases/tag/v0.8.0
+# RushDev v0.10.0
+https://github.com/quayd/RushDev/releases/tag/v0.10.0
 
 FPGA Utility
 
