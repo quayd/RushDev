@@ -1,5 +1,5 @@
-# RushDev v0.10.0
-https://github.com/quayd/RushDev/releases/tag/v0.10.0
+# RushDev Latest Release
+https://github.com/quayd/RushDev/releases/latest
 
 FPGA Utility
 
@@ -32,42 +32,42 @@ Currently, thorough testing has only occurred  with the Osprey ECU50. Some testi
 
 RushDev most likely works with other FPGA's but requires further testing and documenting, which should come shortly.
 
-List of Devices and confirmed compatability
+List of Devices and Primary Function Compatability
 
-| Unit XCVU33P                | Bitstream Loading | Voltage Control |
-|-----------------------------|-------------------|-----------------|
-| Squirrel Forest Kitten FK33 |         Y*        |        Y*       |
-| TUL TH53                    |         Y         |        Y*       |
-| TUL TH53M                   |         Y*        |        Y*       |
-| Osprey E333                 |         Y         |        N        |
-| Osprey E333C                |         Y*        |        N        |
+| Unit XCVU33P                | Bitstream Loading | Voltage Control | Temperature | Voltage Monitor | Clock Frequency |
+|-----------------------------|-------------------|-----------------|-------------|-----------------|-----------------|
+| Squirrel Forest Kitten FK33 |         Y*        |        Y*       |             |                 |                 |
+| TUL TH53                    |         Y         |        Y*       |             |                 |                 |
+| TUL TH53M                   |         Y*        |        Y*       |             |                 |                 |
+| Osprey E333                 |         Y         |        N        |             |                 |                 |
+| Osprey E333C                |         Y*        |        N        |             |                 |                 |
 
-| Unit XCVU35P     | Bitstream Loading | Voltage Control |
-|---------------------------|-------------------|-----------------|
-| AMD Alveo U50C            |         Y         |        Y*       |
-| AMD Varium C1100          |         Y         |        Y*       |
-| TUL TH55                  |         Y*        |        Y*       |
-| Squirrel Jungle Cat JC35  |         Y*        |        Y*       |
-| Osprey ECU50              |         Y         |        Y*       |
-| Osprey E335               |         Y         |        N        |
-| Osprey E335C              |         Y*        |        N        |
+| Unit XCVU35P              | Bitstream Loading | Voltage Control | Temperature | Voltage Monitor | Clock Frequency |
+|---------------------------|-------------------|-----------------|-------------|-----------------|-----------------|
+| AMD Alveo U50C            |         Y         |        Y*       |             |                 |                 |
+| AMD Varium C1100          |         Y         |        Y*       |             |                 |                 |
+| TUL TH55                  |         Y*        |        Y*       |             |                 |                 |
+| Squirrel Jungle Cat JC35  |         Y*        |        Y*       |             |                 |                 |
+| Osprey ECU50              |         Y         |        Y*       |             |                 |                 |
+| Osprey E335               |         Y         |        N        |             |                 |                 |
+| Osprey E335C              |         Y*        |        N        |             |                 |                 |
 
-| Unit XCVU9P       | Bitstream Loading | Voltage Control |
-|-------------------|-------------------|-----------------|
-| AMD VCU1525       |         Y*        |        N        |
-| AMD Alveo U200    |         Y*        |        N        |
-| AMD XBB1525       |         N         |        N        |
-| TUL BTU9P         |         Y*        |        N        |
-| TUL BTU9P-Pro     |         Y*        |        N        |
-| Squirrel BCU1525  |         Y         |        N        |
-| Osprey ECU200     |         Y*        |        N        |
-| Osprey E309       |         Y         |        N        |
+| Unit XCVU9P       | Bitstream Loading | Voltage Control | Temperature | Voltage Monitor | Clock Frequency |
+|-------------------|-------------------|-----------------|-------------|-----------------|-----------------|
+| AMD VCU1525       |         Y*        |        N        |             |                 |                 |
+| AMD Alveo U200    |         Y*        |        N        |             |                 |                 |
+| AMD XBB1525       |         N         |        N        |             |                 |                 |
+| TUL BTU9P         |         Y*        |        N        |             |                 |                 |
+| TUL BTU9P-Pro     |         Y*        |        N        |             |                 |                 |
+| Squirrel BCU1525  |         Y         |        N        |             |                 |                 |
+| Osprey ECU200     |         Y*        |        N        |             |                 |                 |
+| Osprey E309       |         Y         |        N        |             |                 |                 |
 
-| Unit XCVU13P              | Bitstream Loading | Voltage Control |
-|---------------------------|-------------------|-----------------|
-| Bittware CVP13            |         Y*        |        N        |
-| Squirrel Jungle Cat JC13  |         Y*        |        N        |
-| Osprey E313               |         N         |        N        |
+| Unit XCVU13P              | Bitstream Loading | Voltage Control | Temperature | Voltage Monitor | Clock Frequency |
+|---------------------------|-------------------|-----------------|-------------|-----------------|-----------------|
+| Bittware CVP13            |         Y*        |        N        |             |                 |                 |
+| Squirrel Jungle Cat JC13  |         Y*        |        N        |             |                 |                 |
+| Osprey E313               |         N         |        N        |             |                 |                 |
 
 Voltage Control *: Currently uses TeamRedMiner to Bootstrap Settings
 
@@ -94,6 +94,7 @@ Lots more work to go but it might be useful for some of you as a start.
 
 ### FK33/TH53 Specific Notes
 FK33/TH53 doesn't detect DNA until a valid bitstream is detected, so any `-d <device>` options will require the serial number instead to get the expected results.
+
 ### CVP-13 Specific Notes
 For the CVP there are two FTDI devices. If you run RushDev once with no command line options or the `term.sh` script it will show you whether your CVP is detected, which FTDI device JTAG was found on, and it will show another FTDI device on another serial number. Take note of this other device serial number. This second FTDI device is the one the bitstream communicates to, not the JTAG one. The JTAG FTDI is used for detecting the device if no bitstream is loaded, getting the basic temperature and DNA, and loading the bitstream. The other FTDI device is used for ramping up/down and actual mining. 
 
