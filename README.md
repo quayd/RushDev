@@ -32,29 +32,46 @@ Currently, thorough testing has only occurred  with the Osprey ECU50. Some testi
 
 RushDev most likely works with other FPGA's but requires further testing and documenting, which should come shortly.
 
-List of devices confirmed working with loading bitstreams and FPGAMiner mining with the loaded bitstream:
-- Osprey ECU50
-- TUL TH53
-- Squirrel BCU1525
-- AMD Varium C1100
-- Bitware CVP13
+List of Devices and confirmed compatability
 
-List of devices having existing code support but untested in majority of cases:
-- AMD Alveo U50C
-- AMD Alveo U200
-- AMD VCU1525
-- Osprey ECU200
-- Osprey E313
-- Osprey E333C
-- Osprey E335C
-- Squirrel Forest Kitten FK33
-- Squirrel Jungle Cat JC13
-- Squirrel Jungle Cat JC35
-- TUL BTU9P
-- TUL BTU9P-Pro
-- TUL TH53M
-- TUL TH55
+| Unit XCVU33P                | Bitstream Loading | Voltage Control |
+|-----------------------------|-------------------|-----------------|
+| Squirrel Forest Kitten FK33 |         Y*        |        Y*       |
+| TUL TH53                    |         Y         |        Y*       |
+| TUL TH53M                   |         Y*        |        Y*       |
+| Osprey E333                 |         Y         |        N        |
+| Osprey E333C                |         Y*        |        N        |
 
+| Unit XCVU35P     | Bitstream Loading | Voltage Control |
+|---------------------------|-------------------|-----------------|
+| AMD Alveo U50C            |         Y         |        Y*       |
+| AMD Varium C1100          |         Y         |        Y*       |
+| TUL TH55                  |         Y*        |        Y*       |
+| Squirrel Jungle Cat JC35  |         Y*        |        Y*       |
+| Osprey ECU50              |         Y         |        Y*       |
+| Osprey E335               |         Y         |        N        |
+| Osprey E335C              |         Y*        |        N        |
+
+| Unit XCVU9P       | Bitstream Loading | Voltage Control |
+|-------------------|-------------------|-----------------|
+| AMD VCU1525       |         Y*        |        N        |
+| AMD Alveo U200    |         Y*        |        N        |
+| AMD XBB1525       |         N         |        N        |
+| TUL BTU9P         |         Y*        |        N        |
+| TUL BTU9P-Pro     |         Y*        |        N        |
+| Squirrel BCU1525  |         Y         |        N        |
+| Osprey ECU200     |         Y*        |        N        |
+| Osprey E309       |         Y         |        N        |
+
+| Unit XCVU13P              | Bitstream Loading | Voltage Control |
+|---------------------------|-------------------|-----------------|
+| Bittware CVP13            |         Y*        |        N        |
+| Squirrel Jungle Cat JC13  |         Y*        |        N        |
+| Osprey E313               |         N         |        N        |
+
+Voltage Control *: Currently uses TeamRedMiner to Bootstrap Settings
+
+Bitstream Loading *: Currently only loads portion of bitstream or loads inconsistently
 
 ## Usage
 
