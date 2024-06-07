@@ -35,7 +35,7 @@ RushDev most likely works with other FPGA's but requires further testing and doc
 List of Devices and Primary Function Compatability
 
 | Unit XCVU33P                | Bitstream Loading | Voltage Control | 
-|-----------------------------|-------------------|-----------------|
+|-----------------------------|:-----------------:|:---------------:|
 | Squirrel Forest Kitten FK33 |         Y*        |        Y*       |
 | TUL TH53                    |         Y         |        Y*       |
 | TUL TH53M                   |         Y*        |        Y*       |
@@ -43,7 +43,7 @@ List of Devices and Primary Function Compatability
 | Osprey E333C                |         Y*        |        N        |
 
 | Unit XCVU35P              | Bitstream Loading | Voltage Control | 
-|---------------------------|-------------------|-----------------|
+|---------------------------|:-----------------:|:---------------:|
 | AMD Alveo U50C            |         Y         |        Y*       |
 | AMD Varium C1100          |         Y         |        Y*       |
 | TUL TH55                  |         Y*        |        Y*       | 
@@ -53,7 +53,7 @@ List of Devices and Primary Function Compatability
 | Osprey E335C              |         Y*        |        N        | 
 
 | Unit XCVU9P       | Bitstream Loading | Voltage Control | 
-|-------------------|-------------------|-----------------|
+|-------------------|:-----------------:|:---------------:|
 | AMD VCU1525       |         Y*        |        N        | 
 | AMD Alveo U200    |         Y*        |        N        | 
 | AMD XBB1525       |         N         |        N        | 
@@ -64,7 +64,7 @@ List of Devices and Primary Function Compatability
 | Osprey E309       |         Y         |        N        | 
 
 | Unit XCVU13P              | Bitstream Loading | Voltage Control | 
-|---------------------------|-------------------|-----------------|
+|---------------------------|:-----------------:|:---------------:|
 | Bittware CVP13            |         Y*        |        N        | 
 | Squirrel Jungle Cat JC13  |         Y*        |        N        | 
 | Osprey E313               |         N         |        N        | 
