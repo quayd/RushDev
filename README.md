@@ -1,4 +1,5 @@
-# RushDev Latest Release
+# RushDev Latest Release v0.10.0
+
 https://github.com/quayd/RushDev/releases/latest
 
 FPGA Utility
