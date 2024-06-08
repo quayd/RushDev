@@ -72,7 +72,7 @@ List of Devices and Primary Function Compatability
 
 Voltage Control *: Currently uses TeamRedMiner to Bootstrap Settings
 
-Bitstream Loading *: Currently only loads portion of bitstream or loads inconsistently
+Bitstream Loading *: Currently hasn't been confirmed with tests or only loads portion of bitstream.
 
 ## Usage
 
