@@ -29,6 +29,7 @@ Multiple instances of --ftdi-cmd can be called in sequence.
 
 #### Load Example:
 --ftdi-cmd="load -f bitstreams/ECU50/GRAM20_ECU50_Top_A2.bit -d 400200000129b2a60c7002c5" \
+
 --ftdi-cmd="load -f bitstreams/ECU50/GRAM20_ECU50_Top_A2.bit -f bitstreams/ECU50/Z1.bit -f bitstreams/ECU50/Z2.bit -f bitstreams/ECU50/Z3.bit -f bitstreams/ECU50/Z4.bit  -a"
 
 #### Verify Example:
@@ -50,6 +51,6 @@ Which way logs will be displayed
 
 ## UI Display
 Which display will be selected
---no-ui - no user interaction, useful for quick commands or scripting.
---key-input - for the most part is a no-UI mode, allowing scripting, but also acts as a terminal for sending multiple operations and requesting help on features press `?`.
+--no-ui - no user interaction, useful for quick commands or scripting.\
+--key-input - for the most part is a no-UI mode, allowing scripting, but also acts as a terminal for sending multiple operations and requesting help on features press `?`.\
 --tui - ** disabled momentarily ** provides a text user interface with scrolling, multi-page views, and status bars.      
