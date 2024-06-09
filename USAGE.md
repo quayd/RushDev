@@ -5,7 +5,7 @@ Usage: rushdev [OPTIONS]
 Dictates the type of ftdi-cmd command to be run.
 Multiple instances of --ftdi-cmd can be called in sequence.
 
---ftdi-cmd=VALUE\      
+--ftdi-cmd=VALUE      
     monitor\
     load\
     verify\
@@ -44,10 +44,12 @@ Dictates which form of communication to initialize with the device
 
 ## Logging
 Which way logs will be displayed
---log-level=VALUE\   
+--log-level=VALUE   
     warn\
     trace
 
 ## UI Display
 Which display will be selected
---no-ui         
+--no-ui - no user interaction, useful for quick commands or scripting.
+--key-input - for the most part is a no-UI mode, allowing scripting, but also acts as a terminal for sending multiple operations and requesting help on features press `?`.
+--tui - ** disabled momentarily ** provides a text user interface with scrolling, multi-page views, and status bars.      

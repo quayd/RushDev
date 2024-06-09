@@ -103,11 +103,7 @@ Bitstream Loading *: Currently only loads portion of bitstream or loads inconsis
 
 ## Usage
 
-RushDev has 3 modes:
-
-1. NoUI - no user interaction, useful for quick commands or scripting.
-2. KeyInput - for the most part is a no-UI mode, allowing scripting, but also acts as a terminal for sending multiple operations and requesting help on features press `?`.
-3. TUI - ** disabled momentarily ** provides a text user interface with scrolling, multi-page views, and status bars.
+Refer to https://github.com/Dracnea/RushDev/blob/main/USAGE.md for a full list of options and commands.
   
 Scripts in the zip file demonstrate common operations and there is terminal utility built-in that can be accessed with the command line option --key-input or running the term.sh script. Some of the features in the terminal are undocumented at the moment. 
 
