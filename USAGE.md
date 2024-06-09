@@ -47,7 +47,7 @@ Dictates which form of communication to initialize with the device
 ## Logging
 Which way logs will be displayed
 
---log-level=VALUE\   
+--log-level=VALUE   
     warn\
     trace
 
