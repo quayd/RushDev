@@ -28,7 +28,7 @@ Multiple instances of --ftdi-cmd can be called in sequence.
 --ftdi-cmd="monitor -t 5500 -p 350 -d 400200000129b2a60c7002c5 --unit-count=1 -v user"
 
 #### Load Example:
---ftdi-cmd="load -f bitstreams/ECU50/GRAM20_ECU50_Top_A2.bit -d 400200000129b2a60c7002c5" \
+--ftdi-cmd="load -f bitstreams/ECU50/GRAM20_ECU50_Top_A2.bit -d 400200000129b2a60c7002c5"
 
 --ftdi-cmd="load -f bitstreams/ECU50/GRAM20_ECU50_Top_A2.bit -f bitstreams/ECU50/Z1.bit -f bitstreams/ECU50/Z2.bit -f bitstreams/ECU50/Z3.bit -f bitstreams/ECU50/Z4.bit  -a"
 
