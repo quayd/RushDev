@@ -103,7 +103,7 @@ Bitstream Loading *: Currently only loads portion of bitstream or loads inconsis
 
 ## Usage
 
-Refer to [USAGE.md](docs/USAGE.md) for a full list of options and commands.
+Refer to [USAGE.md](USAGE.md) for a full list of options and commands.
   
 Scripts in the zip file demonstrate common operations and there is terminal utility built-in that can be accessed with the command line option --key-input or running the term.sh script. Some of the features in the terminal are undocumented at the moment. 
 
