@@ -24,13 +24,27 @@ Supported operations currently:
 - Verify state of device and perform action. Current actions are simply forms of stopping further chained operations. Primary use case is to prevent loading a bitstream on a device that is already at clock setting that would be dangerous to initiate loading.
  
 
-## Compatibility
-Ubuntu 16.04+
-Windows version coming shortly.
+## OS Compatibility
 
-Currently, thorough testing has only occurred  with the Osprey ECU50. Some testing has taken place for C1100, BCU 1525, FK33, TH53 and CVP-13. The CVP-13 only partially works due to different UARTS for JTAG and FPGA Communications (to be fixed shortly). 
+| Operating System  | Functionality |
+|-------------------|:-------------:|
+| Ubuntu 16.04      | Y             |
+| Ubuntu 18.04      | Y             |
+| Ubuntu 20.04      | Y             |
+| Ubuntu 22.04      | Y             |
+| Windows 10        | N             |
+| Windows 11        | N             |
 
-RushDev most likely works with other FPGA's but requires further testing and documenting, which should come shortly.
+* Ubuntu subversions in between main .04 releases are untested
+* HiveOS and MMPOS run off of Ubuntu 18.04, 20.04 or 22.04 depending on version. In theory they should work but are not yet confirmed.
+* Windows version coming shortly.
+
+
+## Device Compatability
+
+Currently, thorough testing has only occurred with the Osprey ECU50. Some testing has taken place for C1100, BCU 1525, FK33, TH53 and CVP-13.
+
+Additional FPGA's may function but testing is required. The following compatability list is a rough instance based on current community testing.
 
 List of Devices and Primary Function Compatability
 
@@ -59,19 +73,33 @@ List of Devices and Primary Function Compatability
 | AMD XBB1525                   |         N         |        N        | 
 | TUL BTU9P                     |         Y*        |        N        | 
 | TUL BTU9P-Pro                 |         Y*        |        N        | 
-| Squirrel BCU1525              |         Y         |        N        | 
+| Squirrel BCU1525              |         Y         |        N        |
+| Bittware XUP VV8              |         N         |        N        | 
 | Osprey ECU200                 |         Y*        |        N        | 
 | Osprey E309                   |         Y         |        N        | 
 
 | Unit XCVU13P                  | Bitstream Loading | Voltage Control | 
 |-------------------------------|:-----------------:|:---------------:|
-| Bittware CVP13                |         Y*        |        N        | 
+| Bittware CVP13                |         Y*        |        N        |
+| Bittware XUP VV8              |         N         |        N        | 
 | Squirrel Jungle Cat JC13      |         Y*        |        N        | 
 | Osprey E313                   |         N         |        N        | 
 
 Voltage Control *: Currently uses TeamRedMiner to Bootstrap Settings
 
 Bitstream Loading *: Currently only loads portion of bitstream or loads inconsistently
+
+#### Osprey E300 Series Unit Disclaimers:
+- No Osprey Units will possess Voltage Control as each unit has it built in
+- Bitstream Loading and Support are typically dependant on the Osprey Team implementing. However, in theory code could be directly run through SSH or similar connections.
+
+#### XCVU13P Disclaimers:
+- The CVP-13 only partially works due to different UARTS for JTAG and FPGA Communications (to be fixed shortly).
+- Additional XCVU13P chip units are predominantly untested.
+
+#### XUP VV8 Disclaimers:
+- No current or planned support but listed because they are hardware viable and may be some degree of compatible but untested.
+- The XUP VV8 has numerous variants depending on Chip Type (XCVU9P, XCVU13P) and Chip Grades (2, 3, S)
 
 ## Usage
 
