@@ -1,3 +1,5 @@
+[tab]: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 ## RushDev Version 0.10.10
 Usage: rushdev [OPTIONS]
 
@@ -6,10 +8,10 @@ Dictates the type of ftdi-cmd command to be run.
 Multiple instances of --ftdi-cmd can be called in sequence.
 
 --ftdi-cmd=VALUE      
-    monitor
-    load
-    verify
-    ramp
+[tab]monitor\
+[tab]load\
+[tab]verify\
+[tab]ramp\
 
 ### FTDI Device Monitor Options
 Additional information to be passed within an --ftdi-cmd command when selecting monitor type
