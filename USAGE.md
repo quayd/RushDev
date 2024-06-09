@@ -40,12 +40,14 @@ Multiple instances of --ftdi-cmd can be called in sequence.
 
 ### FTDI Device Initialization
 Dictates which form of communication to initialize with the device
---ftdi-init=VALUE
+
+--ftdi-init=VALUE\
     uart
 
 ## Logging
 Which way logs will be displayed
---log-level=VALUE   
+
+--log-level=VALUE\   
     warn\
     trace
 
