@@ -1,10 +1,13 @@
-# RushDev Latest Release
-https://github.com/quayd/RushDev/releases/latest
+# RushDev
 
 FPGA Utility
 
-## ** Big disclaimer ** 
+### Disclaimer
+
 This tool is a work in progress and intends to make it safer and easier to troubleshoot your devices however it can be used to do things you shouldn't! It is up to you to know how your devices work and what operations are not safe for them.
+
+## Latest Release
+You can find the latest release [here](https://github.com/quayd/RushDev/releases/latest)
 
 ## Description
 
@@ -38,7 +41,6 @@ Supported operations currently:
 * Ubuntu subversions in between main .04 releases are untested
 * HiveOS and MMPOS run off of Ubuntu 18.04, 20.04 or 22.04 depending on version. In theory they should work but are not yet confirmed.
 * Windows version coming shortly.
-
 
 ## Device Compatability
 
