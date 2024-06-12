@@ -1,6 +1,8 @@
 ## RushDev Version 0.10.0
 Usage: rushdev [OPTIONS]
 
+You can use the --help or --ftdi-cmd="help PRIMARY_COMMAND" for a full lsit of application details. However, here is a document containing infomration about more essential comamnds and examples.
+
 ## FTDI Device Commands
 Dictates the type of ftdi-cmd command to be run.
 Multiple instances of --ftdi-cmd can be called in sequence.
