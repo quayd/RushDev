@@ -1,5 +1,8 @@
 # RushDev
 
+https://github.com/quayd/RushDev/releases/latest
+
+
 FPGA Utility
 
 ### Disclaimer
@@ -26,6 +29,7 @@ Supported operations currently:
 - Chain sequences of 'operations'
 - Verify state of device and perform action. Current actions are simply forms of stopping further chained operations. Primary use case is to prevent loading a bitstream on a device that is already at clock setting that would be dangerous to initiate loading.
  
+
 
 ## OS Compatibility
 
@@ -134,4 +138,3 @@ There is a script `set-volt6.sh` which will run rushdev to set the voltage on al
 It will be helpful to receive logs from devices not listed above running the various RushDev scripts with the option `--log-level=trace`.
 Some features are not yet working fully. No need to report text user interfaces issues at the moment, as most are known.
 Primarily, helpful issues would be reports of errors, devices not responding properly, or other unexpected results. Please submit these as a new Issue [here](https://github.com/quayd/RushDev/issues)
-
