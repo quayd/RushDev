@@ -26,7 +26,6 @@ Multiple instances of --ftdi-cmd can be called in sequence.
 | -v                | monitor           | String     |                                           | user                      |
 | -x                | monitor           | Integer    |                                           | user                      |
 
-#### Monitor Example:
 --ftdi-cmd="monitor -t 5500 -p 350 -d 400200000328000000011111 --unit-count=1 -v user"
 
 #### Load Example:
