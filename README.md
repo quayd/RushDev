@@ -93,7 +93,7 @@ List of Devices and Primary Function Compatability
 
 Voltage Control *: Currently uses TeamRedMiner to Bootstrap Settings
 
-Bitstream Loading *: Currently only loads portion of bitstream or loads inconsistently
+Bitstream Loading *: Currently hasn't been confirmed with tests or only loads portion of bitstream.
 
 #### Osprey E300 Series Unit Disclaimers:
 - No Osprey Units will possess Voltage Control as each unit has it built in
