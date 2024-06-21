@@ -17,7 +17,7 @@ Multiple instances of --ftdi-cmd can be called in sequence.
 |-------------------|:-----------------:|:----------:|-------------------------------------------|---------------------------|
 | -a                | load              |            |                                           |                           |
 | --action=VALUE    | load              | String     |                                           | quit,                     |
-| -d                | monitor           | DNA        | Device Identifier to pass                 | 400200000129b2a60c7002c5  |
+| -d                | monitor           | DNA        | Device Identifier to pass                 | 400200000328000000011111  |
 | -f                | load              | File       | Bitstream file. Can pass multiple instances to load in sequence.      | top.bit  |
 | -p                | monitor           | Integer    |                                           | 350                       |
 | --max-clock=X     | verify            | Integer    | Maximum clock value                       | 350                       |
@@ -26,13 +26,15 @@ Multiple instances of --ftdi-cmd can be called in sequence.
 | -v                | monitor           | String     |                                           | user                      |
 | -x                | monitor           | Integer    |                                           | user                      |
 
-#### Monitor Example:
---ftdi-cmd="monitor -t 5500 -p 350 -d 400200000129b2a60c7002c5 --unit-count=1 -v user"
+--ftdi-cmd="monitor -t 5500 -p 350 -d 400200000328000000011111 --unit-count=1 -v user"
 
 #### Load Example:
---ftdi-cmd="load -f bitstreams/ECU50/GRAM20_ECU50_Top_A2.bit -d 400200000129b2a60c7002c5"
+--ftdi-cmd="load -f bitstreams/ECU50/GRAM_ECU50_Top_A2.bit -d 400200000328000000011111"
 
---ftdi-cmd="load -f bitstreams/ECU50/GRAM20_ECU50_Top_A2.bit -f bitstreams/ECU50/Z1.bit -f bitstreams/ECU50/Z2.bit -f bitstreams/ECU50/Z3.bit -f bitstreams/ECU50/Z4.bit  -a"
+--ftdi-cmd="load -f bitstreams/ECU50/GRAM_ECU50_Top_A2.bit -f bitstreams/ECU50/Z1.bit -f bitstreams/ECU50/Z2.bit -f bitstreams/ECU50/Z3.bit -f bitstreams/ECU50/Z4.bit  -a"
+
+Load a set of BCU's and a set of C1100 in one script:
+--ftdi-cmd="load -f bcu_top.bit -f bcu_partial1.bit -d serial_BCU1 -d serial_BCU2" --ftdi-cmd="load -f C1100_top.bit -f C1100_partial1.bit -d serial_C1100-1 -d serial_C1100-2"
 
 #### Verify Example:
 --ftdi-cmd="verify --max-clock=35 --action=quit"
