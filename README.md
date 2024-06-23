@@ -1,4 +1,4 @@
-# RushDev
+# RushDev v0.14.0
 
 https://github.com/quayd/RushDev/releases/latest
 
