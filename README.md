@@ -122,9 +122,6 @@ The terminal allows you to do operations that in certain states may be dangerous
   
 Lots more work to go but it might be useful for some of you as a start. 
 
-### FK33 / TH53 / TH53M and potentially TH55 Notes:
-These units won't detect DNA until a valid bitstream is detected, so any `-d <device>` options will require the serial number instead to get the expected results.
-
 ### CVP-13 Specific Notes
 For the CVP there are two FTDI devices. If you run RushDev once with no command line options or the `term.sh` script it will show you whether your CVP is detected, which FTDI device JTAG was found on, and it will show another FTDI device on another serial number. Take note of this other device serial number. This second FTDI device is the one the bitstream communicates to, not the JTAG one. The JTAG FTDI is used for detecting the device if no bitstream is loaded, getting the basic temperature and DNA, and loading the bitstream. The other FTDI device is used for ramping up/down and actual mining. 
 
