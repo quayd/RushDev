@@ -83,7 +83,7 @@ List of Devices and Primary Function Compatability
 
 | Unit XCVU13P                  | Bitstream Loading | Voltage Control | 
 |-------------------------------|:-----------------:|:---------------:|
-| Bittware CVP13                |         Y*        |        N        |
+| Bittware CVP13                |         Y        |        N        |
 | Bittware XUP VV8              |         N         |        N        | 
 | Squirrel Jungle Cat JC13      |         Y*        |        N        | 
 | Osprey E313                   |         N         |        N        | 
@@ -97,8 +97,7 @@ Bitstream Loading *: Currently hasn't been confirmed with tests or only loads po
 - Bitstream Loading and Support are typically dependant on the Osprey Team implementing. However, in theory code could be directly run through SSH or similar connections.
 
 #### XCVU13P Disclaimers:
-- The CVP-13 only partially works due to different UARTS for JTAG and FPGA Communications (to be fixed shortly).
-- Additional XCVU13P chip units are predominantly untested.
+- XCVU13P chip units other than the CVP-13 are predominantly untested.
 
 #### XUP VV8 Disclaimers:
 - No current or planned support but listed because they are hardware viable and may be some degree of compatible but untested.
@@ -118,12 +117,6 @@ The terminal allows you to do operations that in certain states may be dangerous
 - pressing 'l' will open an edit box that lets you load bitstreams. Again it is a short-cut for `load -f` so you can directly type a filename and any other options you wish, that can be found in the above Custom Command help section or taken from the script examples. ex `top.bit -f K1.bit -f K2.bit`
   
 Lots more work to go but it might be useful for some of you as a start. 
-
-### CVP-13 Specific Notes
-For the CVP there are two FTDI devices. If you run RushDev once with no command line options or the `term.sh` script it will show you whether your CVP is detected, which FTDI device JTAG was found on, and it will show another FTDI device on another serial number. Take note of this other device serial number. This second FTDI device is the one the bitstream communicates to, not the JTAG one. The JTAG FTDI is used for detecting the device if no bitstream is loaded, getting the basic temperature and DNA, and loading the bitstream. The other FTDI device is used for ramping up/down and actual mining. 
-
-With the second FTDI serial number, now change the script `load-full.sh` to use the specified serial number with the `-d <your_cvp_serial>` option instead of `-a`
-example: `sudo ./rushdev --log-level=warn --no-ui --ftdi-cmd="monitor -t 5500 -p 350 --unit-count=1 -v user" --ftdi-cmd="verify --max-clock=35 --action=quit" --ftdi-cmd="load -f GRAM20_ECU50_Top_A2.bit -f Z1.bit -f Z2.bit -f Z3.bit -f Z4.bit -d <your_cvp_second_serial_number" --ftdi-cmd="monitor -t 5500 -p 350 --unit-count=1 -v user"`
 
 ### Voltage Control
 There is a script `set-volt6.sh` which will run rushdev to set the voltage on all devices or you can modify the script and change `-a` to `-d <dna/serial number>` one or more times to set the voltage for specific devices. Voltage control requires the utility `changeVoltage` and the `bits` folder from other miner releases to be put in a sub-folder `util`. Inquire on Discord channel for assistance.
