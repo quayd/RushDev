@@ -1,4 +1,4 @@
-# RushDev v0.14.0
+# RushDev v0.18.0
 
 https://github.com/quayd/RushDev/releases/latest
 
@@ -8,9 +8,6 @@ FPGA Utility
 ### Disclaimer
 
 This tool is a work in progress and intends to make it safer and easier to troubleshoot your devices however it can be used to do things you shouldn't! It is up to you to know how your devices work and what operations are not safe for them.
-
-## Latest Release
-You can find the latest release [here](https://github.com/quayd/RushDev/releases/latest)
 
 ## Description
 
